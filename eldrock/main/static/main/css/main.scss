@@ -1,0 +1,202 @@
+$font-stack: 'Montserrat', sans-serif;
+$color-primary: black;
+$color-white: white;
+$color-bg-overlay: rgba(0, 0, 0, 0.6);
+$spacing-base: 8px;
+$border-radius-round: 30px;
+$border-radius-small: 12px;
+$icon-size: 50px;
+$section-height: 100vh;
+$transition-default: 0.4s;
+$z-index-aside: 10;
+
+a {text-decoration: none}
+.widthfull {width: 100%}
+.disflex {display: flex}
+p {font-size: 20px; line-height: 1.4; text-indent: $spacing-base * 2.5}
+html {scroll-behavior: smooth; scroll-padding-top: 100px}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+aside {
+    width: 5%;
+    height: $section-height;
+    position: fixed;
+    z-index: $z-index-aside;
+
+    nav {
+        flex-direction: column;
+        height: $section-height;
+        align-items: center;
+        justify-content: center;
+        button {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            min-width: $icon-size;
+            min-height: $icon-size;
+            border-radius: $border-radius-round;
+            border: 2px solid $color-primary;
+            margin: 60% 0;
+            background-color: $color-white;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            .icon {
+                pointer-events: none;
+                img {
+                    width: $icon-size;
+                    height: $icon-size;
+                    pointer-events: none;
+                }
+            }
+            }
+            .text {
+                position: absolute;
+                right: 0%;
+                width: 0%;
+                opacity: 0;
+                color: $color-primary;
+                font-family: $font-stack;
+                font-weight: 400;
+                font-size: 14px;
+                text-transform: uppercase;
+                white-space: nowrap;
+
+                a{
+                    pointer-events: none;
+                }
+            }
+            :hover {
+                width: 200px;
+                border-radius: $border-radius-round $border-radius-small $border-radius-small $border-radius-round;
+                margin-left: 145px;
+            }
+            :hover .text {
+                opacity: 1;
+                width: 150px;
+                transition: $transition-default;
+            }
+}
+
+
+
+
+
+
+
+
+
+        // .home-btn {
+        //     background-image: url('icons/icon-home.png');
+        //     background-position: center;
+        //     background-size: 100% 100%;
+        //     img{
+        //         width: 100%;
+        //         height: 100%;
+        //         border-radius: 50%;
+        //     }
+        // }
+        // .about-btn {
+        //     background-image: url('icons/icon-about.png');
+        //     background-position: center;
+        //     background-size: 100% 100%;
+        // }
+    }
+
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-stack;
+
+    section {
+        height: $section-height;
+    }
+
+    .section1 {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+        place-content: center;
+        flex-direction: column;
+        background: linear-gradient(rgba(0, 0, 0, 0.48), $color-bg-overlay), url('backs/eldrock-main.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+
+        h1 {
+            color: $color-white;
+            text-transform: uppercase;
+            width: 100%;
+            text-align: center;
+            letter-spacing: 16px;
+            font-size: 120px;
+            font-weight: 400;
+        }
+    }
+
+    .logo-av {
+        height: auto;
+        place-content: center;
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+
+    // Миксин для общих стилей секций
+    @mixin section-common {
+        flex-direction: column;
+        place-items: center;
+
+        h2 {
+            width: 100%;
+            text-align: center;
+            font-size: 60px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            height: 10vh;
+            margin: auto;
+        }
+    }
+
+    // Применяем общие стили к секциям
+    .section2, 
+    .section3 {
+        @include section-common;
+        .about-photo {
+            width: 90%;
+            height: 80vh;
+            flex-direction: row;
+            align-items: center;
+            gap: 5%;
+
+            .photo {
+                width: 55%;
+                object-fit: contain;
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 5% 10%;
+                    pointer-events: none;
+                }
+            }
+            .about {
+                flex-direction: column;
+                width: 45%;
+                text-align: justify;
+                p{
+                    margin: $spacing-base 0;
+                }
+            }
+        }
+    }
+
+    // .section4 {}
+
+}

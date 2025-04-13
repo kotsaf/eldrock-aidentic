@@ -1,0 +1,171 @@
+a {
+  text-decoration: none;
+}
+
+.widthfull {
+  width: 100%;
+}
+
+.disflex {
+  display: flex;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.4;
+  text-indent: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+aside {
+  width: 5%;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+}
+aside nav {
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+aside nav button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 30px;
+  border: 2px solid black;
+  margin: 60% 0;
+  background-color: white;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+aside nav button .icon {
+  pointer-events: none;
+}
+aside nav button .icon img {
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+}
+aside nav .text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+aside nav .text a {
+  pointer-events: none;
+}
+aside nav :hover {
+  width: 200px;
+  border-radius: 30px 12px 12px 30px;
+  margin-left: 145px;
+}
+aside nav :hover .text {
+  opacity: 1;
+  width: 150px;
+  transition: 0.4s;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+}
+main section {
+  height: 100vh;
+}
+main .section1 {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  place-content: center;
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.6)), url("backs/eldrock-main.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+main .section1 h1 {
+  color: white;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 16px;
+  font-size: 120px;
+  font-weight: 400;
+}
+main .logo-av {
+  height: auto;
+  place-content: center;
+  width: 100%;
+}
+main .logo-av img {
+  width: 100%;
+}
+main .section2,
+main .section3 {
+  flex-direction: column;
+  place-items: center;
+}
+main .section2 h2,
+main .section3 h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 60px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  height: 10vh;
+  margin: auto;
+}
+main .section2 .about-photo,
+main .section3 .about-photo {
+  width: 90%;
+  height: 80vh;
+  flex-direction: row;
+  align-items: center;
+  gap: 5%;
+}
+main .section2 .about-photo .photo,
+main .section3 .about-photo .photo {
+  width: 55%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .section2 .about-photo .photo img,
+main .section3 .about-photo .photo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5% 10%;
+  pointer-events: none;
+}
+main .section2 .about-photo .about,
+main .section3 .about-photo .about {
+  flex-direction: column;
+  width: 45%;
+  text-align: justify;
+}
+main .section2 .about-photo .about p,
+main .section3 .about-photo .about p {
+  margin: 8px 0;
+}/*# sourceMappingURL=main.css.map */
