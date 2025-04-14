@@ -1,6 +1,5 @@
 $font-stack: 'Montserrat', sans-serif;
 $color-primary: black;
-$color-white: white;
 $color-bg-overlay: rgba(0, 0, 0, 0.6);
 $spacing-base: 8px;
 $border-radius-round: 30px;
@@ -8,7 +7,7 @@ $border-radius-small: 12px;
 $icon-size: 50px;
 $section-height: 100vh;
 $transition-default: 0.4s;
-$z-index-aside: 10;
+
 
 a {text-decoration: none}
 .widthfull {width: 100%}
@@ -26,7 +25,8 @@ aside {
     width: 5%;
     height: $section-height;
     position: fixed;
-    z-index: $z-index-aside;
+    z-index: 10;
+    
 
     nav {
         flex-direction: column;
@@ -43,10 +43,13 @@ aside {
             border-radius: $border-radius-round;
             border: 2px solid $color-primary;
             margin: 60% 0;
-            background-color: $color-white;
+            background-color: white;
             padding: 0;
             position: relative;
             overflow: hidden;
+            transform: translateX(-100%);
+            opacity: 0;
+            transition: transform $transition-default, opacity $transition-default;
             .icon {
                 pointer-events: none;
                 img {
@@ -106,13 +109,16 @@ main {
         background-attachment: fixed;
 
         h1 {
-            color: $color-white;
+            color: white;
             text-transform: uppercase;
             width: 100%;
             text-align: center;
             letter-spacing: 16px;
             font-size: 120px;
             font-weight: 400;
+            opacity: 0;
+            transform: translateY(-50px);
+            transition: transform $transition-default, opacity $transition-default;
         }
     }
 
@@ -174,10 +180,14 @@ main {
             }
         }
         }
+
+
+
+        
     .section4 {
         flex-direction: column;
         place-items: center;
-        height: auto;
+        height: 100vh;
         h2 {
             width: 100%;
             text-align: center;
@@ -190,42 +200,90 @@ main {
         
         .benefits {
             width: 90%;
-            height: auto;
+            height: 100%;
             flex-direction: row;
             justify-content: space-between;
-            box-sizing: border-box;
+            box-sizing: border-box;           
 
             .benefit {
                 margin-bottom: 5%;
-                height: auto;
-                width: 30%;
+                height: 100%;
+                width: 31%;
                 border-radius: 30px;
                 border:  2px solid #000 ;
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
+                align-items: flex-start;
                 box-sizing: border-box;
                 padding: 0 1% 1% 1%;
-                h3 {
-                    width: 95%;
-                    font-size: 28px;
-                    margin: auto;
+                .benefit-text {
+                    text-align: left;
+                    margin-top: auto;
+                    margin-bottom: 20%;
+                    h3 {
+                        width: 95%;
+                        font-size: 28px;
+                        color: white;
+                        margin: 4%;
+                        transform: scale(1);
+                        text-transform: uppercase;
+                        font-weight: 500;
+                    }
+                    p{
+                        width: 60%;
+                        font-size: 18px;
+                        color: white;
+                        text-align: left;
+                        margin: 0;
+                        text-indent: 0;
+                        transform: scale(1);
+                    }
+                }         
+            }
+            
+            .benefit1 {
+                height: 100%;
+                background: linear-gradient(rgba(0, 0, 0, 0.2), $color-bg-overlay), url('backs/transfer.jpg');
+                background-size: cover;
+                transition: $transition-default;}
+            .benefit2 {
+                height: 100%;
+                background: linear-gradient(rgba(0, 0, 0, 0.2), $color-bg-overlay), url('backs/quadro.jpg');
+                background-size: cover;
+                transition: $transition-default;}
+            .benefit3 {
+                height: 100%;
+                background: linear-gradient(rgba(0, 0, 0, 0.2), $color-bg-overlay), url('backs/transfer.jpg');
+                background-size: cover;
+                transition: $transition-default;}  
+                
+            &:hover .benefit {
+                transform: scale(0.95);
+                transition: $transition-default;
+                filter: blur(10px);
+            }
+            
+            .benefit {
+                &:hover {
+                    filter: blur(0);
+                    transform: scale(1.05);
+                    transition: $transition-default;
+                    background-size: cover;
                 }
-                p{
-                    width: 95%;
-                }
-                img {
-                    width: 100%;
-                    height: 80%;
-                    border-radius: 30px;
-                    object-fit: cover;
-                    pointer-events: none;
-                }
+
                 
             }
+
+            // :hover .benefit-text {
+            //     filter: blur(0);
+            //     opacity: 1;
+            //     transform: scale(1);
+            //     transition: $transition-default;
+            // }
         }
     }
+
+
+
 
     .section5 {
         height: auto;
@@ -292,7 +350,7 @@ main {
         
             &__submit {
                 background-color: $color-primary;
-                color: $color-white;
+                color: white;
                 padding: 15px 30px;
                 border: none;
                 border-radius: 8px;
@@ -313,5 +371,23 @@ main {
                 }
             }
         }
+    }
+
+    .section6 {
+        height: 2vh;
+        place-items: center;
+        div {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+            p {
+            font-size: 12px;
+            color: $color-primary;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 0;
+        }
+        }
+        
     }
 }
