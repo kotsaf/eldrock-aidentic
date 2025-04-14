@@ -24,7 +24,7 @@
                 <a href="#1st-anchor" class="text">
                     На главную
                 </a>
-            </butеon>
+            </button>
 
             <button class="about-btn">
                 <div class="icon">
@@ -37,19 +37,19 @@
 
             <button>
                 <div class="icon">
-                    <img src="{% static 'main/img/icons/icon-about.png' %}" />
+                    <img src="{% static 'main/img/icons/icon-services.png' %}" />
                 </div>  
-                <a href="#2nd-anchor" class="text">
-                    О нас 
+                <a href="#3nd-anchor" class="text">
+                    Услуги
                 </a>
             </button>
 
             <button>
                 <div class="icon">
-                    <img src="{% static 'main/img/icons/icon-about.png' %}" />
+                    <img src="{% static 'main/img/icons/icon-contact.png' %}" />
                 </div>  
-                <a href="#2nd-anchor" class="text">
-                    О нас 
+                <a href="#4nd-anchor" class="text">
+                    Контакт
                 </a>
             </button>
             
@@ -102,9 +102,59 @@
                 </div>
             </div>
         </section>
+
         <section class="section4 widthfull disflex">
-            
+            <h2 id="3nd-anchor">Услуги</h2>
+            <div class="benefits disflex">
+
+                <div class="benefit disflex">
+                    <h3>Трансфер</h3>
+                    <img src="{% static 'main/img/transfer.jpg' %}" alt="трансфер">
+                </div>
+
+                <div class="benefit disflex">
+                    <h3>Экскурсии</h3>
+                    <img src="{% static 'main/img/quadro.jpg' %}" alt="трансфер">
+                </div>
+
+                <div class="benefit disflex">
+                    <h3>Трансфер</h3>
+                    <img src="{% static 'main/img/transfer.jpg' %}" alt="трансфер">
+                </div>
+
+            </div>    
         </section>
+
+        <section class="section5 widthfull disflex">
+            <div class="map">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8586b27d27548c1b93623f78f517d1ad93976f5d424eee6faa2e062b3cc45150&amp;width=100%25&amp;height=703&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+            <div class="contact-form">
+                
+                <h2 id="4nd-anchor">Свяжитесь с нами</h2>
+                <form method="" class="contact-form__form">
+                    <div class="contact-form__group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="contact-form__group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="contact-form__group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="contact-form__group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="" class="contact-form__submit">Отправить</button>
+                </form>
+                
+            </div>
+        </section>
+
     </main>    
 </body>
 <script src="/static/main/js/scripts.js"></script>
