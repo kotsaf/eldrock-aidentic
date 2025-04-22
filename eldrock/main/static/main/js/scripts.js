@@ -1,6 +1,7 @@
 const buttons = document.querySelectorAll('aside nav button');
 const title = document.querySelector('.section1 h1');
 
+// появление элементов первой секции (кнопки меню и название отеля)
 buttons.forEach((button, index) => {
     setTimeout(() => {
         anime({
