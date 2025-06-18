@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -21,11 +26,27 @@ html {
   scroll-padding-top: 100px;
 }
 
+.heading {
+  width: 100%;
+  text-align: center;
+  font-size: 60px;
+  text-transform: uppercase;
+  margin: 2% 0 2% 0;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+
 body {
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: row;
+}
+body.lock {
+  overflow: hidden;
+}
+body.open {
+  overflow: auto;
 }
 
 aside {
@@ -48,7 +69,7 @@ aside nav button {
   min-width: 50px;
   min-height: 50px;
   border-radius: 30px;
-  border: 2px solid black;
+  border: 1px solid black;
   margin: 60% 0;
   background-color: white;
   padding: 0;
@@ -83,7 +104,7 @@ aside nav .text a {
 }
 aside nav :hover {
   width: 200px;
-  border-radius: 30px 12px 12px 30px;
+  border-radius: 30px;
   margin-left: 145px;
 }
 aside nav :hover .text {
@@ -115,8 +136,8 @@ main .section1 h1 {
   width: 100%;
   text-align: center;
   letter-spacing: 16px;
-  font-size: 120px;
-  font-weight: 400;
+  font-size: 140px;
+  font-weight: 200;
   opacity: 0;
   transform: translateY(-50px);
   transition: transform 0.4s, opacity 0.4s;
@@ -129,91 +150,87 @@ main .logo-av {
 main .logo-av img {
   width: 100%;
 }
-main .section2,
-main .section3 {
+main .section2 {
   height: auto;
   flex-direction: column;
-  place-items: center;
-}
-main .section2 h2,
-main .section3 h2 {
-  width: 100%;
-  text-align: center;
-  font-size: 60px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  height: 10vh;
-  margin: auto;
-}
-main .section2 .about-photo,
-main .section3 .about-photo {
+  margin-left: 5%;
   width: 90%;
-  height: 80vh;
-  flex-direction: row;
-  align-items: center;
-  gap: 5%;
 }
-main .section2 .about-photo .photo,
-main .section3 .about-photo .photo {
-  width: 55%;
+main .section2 .about-photo {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  gap: 10%;
+}
+main .section2 .about-photo .block1 {
+  width: 70%;
+  margin-left: 15%;
+  text-align: center;
+  margin-bottom: 1%;
+}
+main .section2 .about-photo .block1 p {
+  margin: 0;
+}
+main .section2 .about-photo .block2,
+main .section2 .about-photo .block3 {
+  gap: 5%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 1%;
+}
+main .section2 .about-photo .block2 .photo,
+main .section2 .about-photo .block3 .photo {
+  width: 50%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-main .section2 .about-photo .photo img,
-main .section3 .about-photo .photo img {
+main .section2 .about-photo .block2 .photo img,
+main .section2 .about-photo .block3 .photo img {
   max-width: 100%;
   height: auto;
   border-radius: 5% 10%;
   pointer-events: none;
 }
-main .section2 .about-photo .about,
-main .section3 .about-photo .about {
+main .section2 .about-photo .block2 .about,
+main .section2 .about-photo .block3 .about {
   flex-direction: column;
-  width: 45%;
+  width: 50%;
   text-align: justify;
 }
-main .section2 .about-photo .about p,
-main .section3 .about-photo .about p {
-  margin: 8px 0;
+main .section2 .about-photo .block2 .about p,
+main .section2 .about-photo .block3 .about p {
+  margin: 1%;
 }
-main .section4 {
+main .section3 {
   flex-direction: column;
   place-items: center;
   height: 100vh;
 }
-main .section4 h2 {
-  width: 100%;
-  text-align: center;
-  font-size: 60px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  height: 10vh;
-  margin-bottom: 5%;
-}
-main .section4 .benefits {
+main .section3 .benefits {
   width: 90%;
   height: 100%;
   flex-direction: row;
   justify-content: space-between;
   box-sizing: border-box;
 }
-main .section4 .benefits .benefit {
+main .section3 .benefits .benefit {
   margin-bottom: 5%;
   height: 100%;
   width: 31%;
   border-radius: 30px;
-  border: 2px solid #000;
+  border: 1px solid black;
   flex-direction: column;
   align-items: flex-start;
   box-sizing: border-box;
   padding: 0 1% 1% 1%;
 }
-main .section4 .benefits .benefit .benefit-text {
+main .section3 .benefits .benefit .benefit-text {
   text-align: left;
   margin-top: auto;
   margin-bottom: 20%;
 }
-main .section4 .benefits .benefit .benefit-text h3 {
+main .section3 .benefits .benefit .benefit-text h3 {
   width: 95%;
   font-size: 28px;
   color: white;
@@ -222,7 +239,7 @@ main .section4 .benefits .benefit .benefit-text h3 {
   text-transform: uppercase;
   font-weight: 500;
 }
-main .section4 .benefits .benefit .benefit-text p {
+main .section3 .benefits .benefit .benefit-text p {
   width: 60%;
   font-size: 18px;
   color: white;
@@ -231,122 +248,231 @@ main .section4 .benefits .benefit .benefit-text p {
   text-indent: 0;
   transform: scale(1);
 }
-main .section4 .benefits .benefit1 {
+main .section3 .benefits .benefit1 {
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("backs/transfer.jpg");
   background-size: cover;
   transition: 0.4s;
 }
-main .section4 .benefits .benefit2 {
+main .section3 .benefits .benefit2 {
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("backs/quadro.jpg");
   background-size: cover;
   transition: 0.4s;
 }
-main .section4 .benefits .benefit3 {
+main .section3 .benefits .benefit3 {
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("backs/transfer.jpg");
   background-size: cover;
   transition: 0.4s;
 }
-main .section4 .benefits:hover .benefit {
+main .section3 .benefits:hover .benefit {
   transform: scale(0.95);
   transition: 0.4s;
   filter: blur(10px);
 }
-main .section4 .benefits .benefit:hover {
+main .section3 .benefits .benefit:hover {
   filter: blur(0);
   transform: scale(1.05);
   transition: 0.4s;
   background-size: cover;
 }
+main .section3 .benefits .popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s;
+}
+main .section3 .benefits .popup:hover {
+  transform: scale(1);
+  filter: none;
+}
+main .section3 .benefits .popup .popup-body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .section3 .benefits .popup .popup-body .popup-content {
+  width: 85vw;
+  height: 80vh;
+  background-color: white;
+  border-radius: 30px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+main .section3 .benefits .popup .popup-body .popup-content .popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  cursor: pointer;
+}
+main .section3 .benefits .popup.open {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.8s ease 0s;
+  z-index: 100;
+}
 main .section5 {
   height: auto;
   justify-content: center;
   gap: 5%;
-  padding: 5%;
   box-sizing: border-box;
+  margin-top: 5%;
+  width: 90%;
+  margin-left: 5%;
+  height: 100vh;
 }
 main .section5 .map {
-  width: 90%;
+  width: 50%;
+  height: 70vh;
+}
+main .section5 .map .map2 {
+  width: 100%;
   height: 100%;
 }
-main .section5 .contact-form {
-  width: 70%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 40px;
-  background: #fff;
+main .section5 .actions {
+  width: 50%;
+  flex-direction: column;
+  gap: 10%;
+}
+main .section5 .form-wrapper {
+  width: 100%;
+  margin: 0;
+  min-height: 10vh;
+  border: 1px solid black;
   border-radius: 30px;
-  border: 2px solid #000;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
-main .section5 .contact-form h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: black;
-  font-size: 32px;
+main .section5 .form-wrapper .open {
+  height: 75vh;
 }
-main .section5 .contact-form__form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-main .section5 .contact-form__group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-main .section5 .contact-form__group label {
-  font-size: 16px;
-  color: black;
-  font-weight: 500;
-}
-main .section5 .contact-form__group input, main .section5 .contact-form__group textarea {
-  padding: 12px;
-  border: 2px solid black;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: all 0.3s ease;
-}
-main .section5 .contact-form__group input:focus, main .section5 .contact-form__group textarea:focus {
-  outline: none;
-  border-color: black;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-main .section5 .contact-form__group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-main .section5 .contact-form__submit {
-  background-color: black;
-  color: white;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 500;
+main .section5 .form-wrapper .form-header {
+  background: #fff;
   cursor: pointer;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+main .section5 .form-wrapper .form-header h2 {
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+}
+main .section5 .form-wrapper .form {
+  padding: 3%;
+  box-sizing: border-box;
+  margin-top: 2%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+main .section5 .form-wrapper .form .open {
+  height: 75vh;
+}
+main .section5 .form-wrapper .form form {
+  width: 100%;
+  height: 100%;
+}
+main .section5 .form-wrapper .form .form-area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 28px;
+}
+main .section5 .form-wrapper .form .form-area label {
+  margin-top: 2%;
+}
+main .section5 .form-wrapper .form .form-area input,
+main .section5 .form-wrapper .form .form-area textarea {
+  width: 100%;
+  height: 60px;
+  resize: none;
+  margin: 0;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+main .section5 .form-wrapper .form .form-area textarea {
+  height: 150px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+main .section5 .form-wrapper .send-btn {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+main .section5 .form-wrapper .send-btn button {
+  height: 100%;
+  width: 175px;
+  border-radius: 30px;
+  border: 1px solid black;
+  background: black;
+  color: white;
   transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
 }
-main .section5 .contact-form__submit:hover {
-  background-color: black;
-  transform: translateY(-2px);
+main .section5 .form-wrapper .send-btn :hover {
+  color: black;
+  background: white;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
-main .section5 .contact-form__submit:active {
-  transform: translateY(0);
+main .section5 .form-wrapper .send-btn :active {
+  background: gray;
+  color: white;
+  transform: scale(0.95);
+  transition: all 0.1s ease;
 }
-main .section6 {
-  height: 2vh;
+
+.section6 {
+  height: 4vh;
   place-items: center;
+  margin-top: 2px;
 }
-main .section6 div {
+.section6 div {
   width: 100%;
   height: 100%;
   margin-bottom: 10px;
 }
-main .section6 div p {
+.section6 div p {
   font-size: 12px;
   color: black;
   font-weight: 500;

@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
     <title>ELDROCK | Выбери комфорт</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
 
             <button class="home-btn">
                 <div class="icon">
-                    <img src="{% static 'main/img/icons/icon-home.png' %}" />
+                    <img src="{% static 'main/img/icons/icon-home.png' %}"/>
                 </div>  
                 <a href="#1st-anchor" class="text">
                     На главную
@@ -57,6 +58,7 @@
     </aside>
     <main>
 
+        <!-- СЕКЦИЯ 1 (ВТРЕЧНЫЙ ЭКРАН, НАДПИСЬ) -->
         <section class="section1 widthfull disflex">
             <h1 id="1st-anchor">eldrock</h1>
         </section>
@@ -65,105 +67,155 @@
             <img src="{% static 'main/img/mount-art-main.png' %}" />
         </div>
 
+
+        <!-- СЕКЦИЯ 2 (ТЕКСТ ABOUT И ФОТКИ) -->
         <section class="section2 widthfull disflex">
-            <h2 id="2nd-anchor" >О нас</h2>
+            <h2 id="2nd-anchor" class="heading">О нас</h2>
             <div class="about-photo disflex">
-                <div class="photo">
-                    <img src="{% static 'main/img/eldrock2.jpg' %}" />
+                <div class="block1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestiae quos laborum modi corporis aliquam quisquam sit quas exercitationem impedit rerum adipisci rem quis perspiciatis dolore nisi, temporibus explicabo quidem, doloremque nam neque itaque. Illo aliquid accusamus nesciunt voluptates explicabo fuga cumque veritatis tempora dolor sapiente, quod id enim. Vero et rerum excepturi? In consequuntur commodi corporis reprehenderit mollitia inventore est, quia vel nemo nostrum tempora alias dignissimos error obcaecati odit quisquam fugit vero assumenda quam consequatur impedit fugiat perferendis pariatur? Ratione fugiat totam autem dolor hic. Vel, eveniet, consequatur similique modi nulla et non magni amet consectetur voluptates sit.</p>
                 </div>
-                <div class="about disflex">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id libero laborum voluptates esse quidem quod dolor culpa similique totam distinctio. Accusantium, earum in voluptatum, illo voluptatibus amet repellat odit harum, quisquam blanditiis accusamus iste distinctio maxime quod nesciunt iure non error sapiente? Odio, facere ad impedit consequuntur dolorum eos illum.
-                    </p>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusantium atque optio enim sunt laborum!
-                    </p>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum iure nihil similique voluptates inventore. Labore incidunt modi voluptatum assumenda non iusto tempora. Qui molestias soluta rem pariatur, obcaecati maxime culpa.
-                    </p>
+                <div class="block2">
+                    <div class="photo">
+                        <img src="{% static 'main/img/eldrock2.jpg' %}" />
+                    </div>
+                    <div class="about disflex">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id libero laborum voluptates esse quidem quod dolor culpa similique totam distinctio. Accusantium, earum in voluptatum, illo voluptatibus amet repellat odit harum, quisquam blanditiis accusamus iste distinctio maxime quod nesciunt iure non error sapiente? Odio, facere ad impedit consequuntur dolorum eos illum.
+                        </p>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusantium atque optio enim sunt laborum!
+                        </p>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum iure nihil similique voluptates inventore. Labore incidunt modi voluptatum assumenda non iusto tempora. Qui molestias soluta rem pariatur, obcaecati maxime culpa.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="section3 widthfull disflex">
-            <div class="about-photo disflex">
-                <div class="about disflex">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id libero laborum voluptates esse quidem quod dolor culpa similique totam distinctio. Accusantium, earum in voluptatum, illo voluptatibus amet repellat odit harum, quisquam blanditiis accusamus iste distinctio maxime quod nesciunt iure non error sapiente? Odio, facere ad impedit consequuntur dolorum eos illum.
-                    </p>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusantium atque optio enim sunt laborum!
-                    </p>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum iure nihil similique voluptates inventore. Labore incidunt modi voluptatum assumenda non iusto tempora. Qui molestias soluta rem pariatur, obcaecati maxime culpa.
-                    </p>
-                </div>
-                <div class="photo">
-                    <img src="{% static 'main/img/eldrock3.jpg' %}" />
+                <div class="block3">
+                    <div class="about disflex">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id libero laborum voluptates esse quidem quod dolor culpa similique totam distinctio. Accusantium, earum in voluptatum, illo voluptatibus amet repellat odit harum, quisquam blanditiis accusamus iste distinctio maxime quod nesciunt iure non error sapiente? Odio, facere ad impedit consequuntur dolorum eos illum.
+                        </p>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusantium atque optio enim sunt laborum!
+                        </p>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum iure nihil similique voluptates inventore. Labore incidunt modi voluptatum assumenda non iusto tempora. Qui molestias soluta rem pariatur, obcaecati maxime culpa.
+                        </p>
+                    </div>
+                    <div class="photo">
+                        <img src="{% static 'main/img/eldrock3.jpg' %}" />
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="section4 widthfull disflex">
-            <h2 id="3nd-anchor">Услуги</h2>
+
+        <!-- СЕКЦИЯ 3 (УСЛУГИ) -->
+        <section class="section3 widthfull disflex">
+            <h2 id="3nd-anchor" class="heading">Услуги</h2>
             <div class="benefits disflex">
 
-                <div class="benefit benefit1 disflex">
+                <div href="#popup1" class="benefit benefit1 disflex popup-trigger">
                     <div class="benefit-text">
                         <h3>Трансфер</h3>
                         <p>Lorem ipsum dolor sit amet</p>
                     </div>
                 </div>
+                <div id="popup1" class="popup">
+                    <div class="popup-body">
+                        <div class="popup-content">
+                            <button class="popup-close">X</button>
+                            <h3>Модальное окно</h3>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                </div>
 
-                <div class="benefit benefit2 disflex">
+                <div href="#popup2" class="benefit benefit2 disflex popup-trigger">
                     <div class="benefit-text">
                         <h3>Экскурсии</h3>
                         <p>Lorem ipsum dolor sit amet</p>
                     </div>
                 </div>
+                <div id="popup2" class="popup">
+                    <div class="popup-body">
+                        <div class="popup-content">
+                            <button class="popup-close">X</button>
+                            <h3>Модальное окно</h3>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                </div>
 
-                <div class="benefit benefit3 disflex">
+                <div href="#popup3" class="benefit benefit3 disflex popup-trigger">
                     <div class="benefit-text">
                         <h3>Развлечения</h3>       
                         <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+                <div id="popup3" class="popup">
+                    <div class="popup-body">
+                        <div class="popup-content">
+                            <button class="popup-close">X</button>
+                            <h3>Модальное окно</h3>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
                     </div>
                 </div>
 
             </div>    
         </section>
 
+
+        <!-- СЕКЦИЯ 5 (КАРТА, ДЕЙСТВИЯ) -->
         <section class="section5 widthfull disflex">
             <div class="map">
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8586b27d27548c1b93623f78f517d1ad93976f5d424eee6faa2e062b3cc45150&amp;width=100%25&amp;height=703&amp;lang=ru_RU&amp;scroll=true"></script>
+                <div class="map2">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8586b27d27548c1b93623f78f517d1ad93976f5d424eee6faa2e062b3cc45150&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
             </div>
-            <div class="contact-form">
-                
-                <h2 id="4nd-anchor">Свяжитесь с нами</h2>
-                <form method="" class="contact-form__form">
-                    <div class="contact-form__group">
-                        <label for="name">Ваше имя</label>
-                        <input type="text" id="name" name="name" required>
+            <div class="actions disflex">
+                <div class="form-wrapper" id="form-wrapper">
+
+                    <div class="form-header" id="toggle-form">
+                        <h2>Оставить заявку</h2>
                     </div>
-                    <div class="contact-form__group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+
+                    <div class="form">
+                        <form>
+
+                            <div class="form-area name">
+                                <label for="name">Имя</label>
+                                <input maxlength="20" type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-area phone">
+                                <label for="phone">Телефон</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                            </div>
+                            <div class="form-area message">
+                                <label for="message">Сообщение</label>
+                                <textarea maxlength="300" id="message" name="message"></textarea>
+                            </div>
+                            <div class="send-btn">
+                                <button type="submit">Отправить</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="contact-form__group">
-                        <label for="phone">Телефон</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="contact-form__group">
-                        <label for="message">Сообщение</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="" class="contact-form__submit">Отправить</button>
-                </form>
-                
+                </div>
+                <div>
+                    <p>ДЕЙСТВИЕ</p>
+                </div>
             </div>
         </section>
 
+        
+        
+        <!-- СЕКЦИЯ 6 (ТОВ ЗНАК, МЕТКА) -->
         <section class="section6 widthfull disflex">
             <div>
                 <p>Eldrock© 2025. Все права защищены.</p>
+                <p>By SafKot</p>
             </div>
         </section>
 
