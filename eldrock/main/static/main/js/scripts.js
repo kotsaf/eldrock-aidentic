@@ -1,6 +1,7 @@
 const buttons = document.querySelectorAll('aside nav button');
 const title = document.querySelector('.section1 h1');
 
+// появление элементов первой секции (кнопки меню и название отеля)
 buttons.forEach((button, index) => {
     setTimeout(() => {
         anime({
@@ -24,6 +25,7 @@ buttons.forEach((button, index) => {
                 }
             }
         });
+<<<<<<< HEAD
     }, 500 * (index + 1));
 });
 
@@ -144,4 +146,7 @@ const FormWrapper = document.getElementById('form-wrapper');
 
 FormHead.addEventListener('click', function () {
     FormWrapper.classList.toggle('open');
+=======
+    }, 500 * (index + 1)); // Задержка для каждой кнопки
+>>>>>>> e502024e0826d2c1a728934492800eaacc3507b5
 });

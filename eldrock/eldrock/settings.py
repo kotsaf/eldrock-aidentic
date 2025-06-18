@@ -55,8 +55,6 @@ WSGI_APPLICATION = 'eldrock.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -66,8 +64,6 @@ DATABASES = {
 
 
 # Password validation
-# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -84,8 +80,13 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+<<<<<<< HEAD
 
 LANGUAGE_CODE = 'ru'
+=======
+# Internationalization
+LANGUAGE_CODE = 'en-us'
+>>>>>>> e502024e0826d2c1a728934492800eaacc3507b5
 
 TIME_ZONE = 'Europe/Moscow'
 
@@ -95,12 +96,8 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
-
 STATIC_URL = 'static/'
 STATICFILES_DIRS = []
 
 # Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
