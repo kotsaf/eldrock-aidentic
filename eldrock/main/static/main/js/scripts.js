@@ -1,31 +1,29 @@
 const buttons = document.querySelectorAll('aside nav button');
 const title = document.querySelector('.section1 h1');
 
-// появление элементов первой секции (кнопки меню и название отеля)
+// Анимация кнопок и заголовка
 buttons.forEach((button, index) => {
     setTimeout(() => {
         anime({
             targets: button,
-            duration: 100,
+            duration: 1000,
             translateX: '0%',
             opacity: 1,
             easing: 'easeOutExpo',
-            complete: function() {
-                
+            complete: () => {
                 if (index === buttons.length - 1) {
                     setTimeout(() => {
                         anime({
                             targets: title,
-                            duration: 1500,
-                            translateY: '0',
+                            duration: 1000,
+                            translateY: '0%',
                             opacity: 1,
                             easing: 'easeOutExpo'
                         });
-                    }, 300);
+                    }, 0);
                 }
             }
         });
-<<<<<<< HEAD
     }, 500 * (index + 1));
 });
 
