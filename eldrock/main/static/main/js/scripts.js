@@ -30,9 +30,7 @@ buttons.forEach((button, index) => {
 
 const popupTriggers = document.querySelectorAll('.popup-trigger');
 const body = document.body;
-const lockPadding = document.querySelectorAll('.lock-padding');
 const timeout = 800;
-
 let unlock = true;
 
 // подборка модальных окон
