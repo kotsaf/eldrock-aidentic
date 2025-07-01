@@ -1,5 +1,7 @@
 const buttons = document.querySelectorAll('.nav-btn');
 const title = document.querySelector('.section1 h1');
+const buttonDates = document.getElementById("scroll-dates");
+
 
 // Анимация кнопок и заголовка
 buttons.forEach((button, index) => {
