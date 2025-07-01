@@ -40,6 +40,12 @@ buttons.forEach((button, index) => {
     }, 400 * (index + 1));
 });
 
+// Маска телефона
+document.addEventListener("DOMContentLoaded", () => {
+    const phoneInput = document.getElementById("phone");
+    if (phoneInput) Inputmask("+7 (999) 999-99-99").mask(phoneInput);
+});
+
 
 const popupTriggers = document.querySelectorAll('.popup-trigger');
 const body = document.body;
