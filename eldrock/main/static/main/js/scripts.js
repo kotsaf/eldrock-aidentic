@@ -47,6 +47,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// функция открытия блока
+function openActionBlock(targetBlock) {
+    const isOpen = targetBlock.classList.contains('open');
+
+    actions.forEach(block => {
+        if (block !== targetBlock && block.classList.contains('open')) {
+            anime({
+                targets: block,
+                height: '10vh',
+                duration: ANIMATION_DURATION,
+                easing: 'easeInOutQuart'
+            });
+            setTimeout(() => block.classList.remove('open'), ANIMATION_DURATION);
+        }
+    });
+
+    anime({
+        targets: targetBlock,
+        height: isOpen ? '10vh' : '70vh',
+        duration: ANIMATION_DURATION,
+        easing: 'easeInOutQuart'
+    });
+
+    isOpen
+        ? setTimeout(() => targetBlock.classList.remove('open'), ANIMATION_DURATION)
+        : targetBlock.classList.add('open');
+}
 
 
 
