@@ -8,16 +8,27 @@ buttons.forEach((button, index) => {
     setTimeout(() => {
         anime({
             targets: button,
-            duration: 1000,
+            duration: 1500,
             translateX: '0%',
             opacity: 1,
             easing: 'easeOutExpo',
             complete: () => {
-                if (index === buttons.length - 1) {
+                if (index === 0) {
+                    const scrollBtn = document.getElementById("scroll-dates");
+                    if (scrollBtn) {
+                        anime({
+                            targets: scrollBtn,
+                            duration: 1000,
+                            opacity: 1,
+                            easing: 'easeOutExpo'
+                        });
+                    }
+                }
+                if (index === 0) {
                     setTimeout(() => {
                         anime({
                             targets: title,
-                            duration: 1000,
+                            duration: 1500,
                             translateY: '0%',
                             opacity: 1,
                             easing: 'easeOutExpo'
@@ -26,7 +37,7 @@ buttons.forEach((button, index) => {
                 }
             }
         });
-    }, 500 * (index + 1));
+    }, 400 * (index + 1));
 });
 
 
