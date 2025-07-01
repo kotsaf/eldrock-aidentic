@@ -47,6 +47,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+
+
+
+
+
 const popupTriggers = document.querySelectorAll('.popup-trigger');
 const body = document.body;
 const timeout = 800;
