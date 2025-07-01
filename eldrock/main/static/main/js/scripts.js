@@ -1,4 +1,4 @@
-const buttons = document.querySelectorAll('aside nav button');
+const buttons = document.querySelectorAll('.nav-btn');
 const title = document.querySelector('.section1 h1');
 
 // Анимация кнопок и заголовка
