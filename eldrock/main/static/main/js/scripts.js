@@ -80,7 +80,7 @@ function openActionBlock(targetBlock) {
 
 
 
-const popupTriggers = document.querySelectorAll('.popup-trigger');
+const actions = document.querySelectorAll('.act-btn');
 const body = document.body;
 const timeout = 800;
 let unlock = true;
