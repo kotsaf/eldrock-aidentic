@@ -82,8 +82,7 @@ function openActionBlock(targetBlock) {
 
 const actions = document.querySelectorAll('.act-btn');
 const headers = document.querySelectorAll('.act-header');
-const timeout = 800;
-let unlock = true;
+const ANIMATION_DURATION = 500;
 
 // подборка модальных окон
 if (popupTriggers.length > 0) {
