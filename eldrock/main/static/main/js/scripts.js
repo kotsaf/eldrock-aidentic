@@ -81,7 +81,7 @@ function openActionBlock(targetBlock) {
 
 
 const actions = document.querySelectorAll('.act-btn');
-const body = document.body;
+const headers = document.querySelectorAll('.act-header');
 const timeout = 800;
 let unlock = true;
 
